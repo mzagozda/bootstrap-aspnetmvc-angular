@@ -1,0 +1,29 @@
+<div>
+  <h1 class="cover-heading">Account List</h1>
+  <app-account-type (filterChanged)="accountTypeChanged($event)"></app-account-type>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Account Type</th>
+      <th scope="col">Balance</th>
+      <th scope="col">Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of accountsFiltered">
+      <td>{{account.firstName}}</td>
+      <td>{{account.lastName}}</td>
+      <td>{{account.accountType}}</td>
+      <td>{{account.balance}}</td>
+      <td>{{account.address}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <a routerLink="/new-account"><button type="button" class="btn btn-primary">Add</button></a>
+  </div>
+</div>

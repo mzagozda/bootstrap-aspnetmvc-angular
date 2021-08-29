@@ -1,0 +1,21 @@
+
+  <div class="mb-3 row">
+    <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="firstName" [(ngModel)]="firstName">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="lastName" [(ngModel)]="lastName">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="balance" class="col-sm-2 col-form-label">Balance</label>
+    <div class="col-sm-6">
+      <input type="number" class="form-control" id="balance" [(ngModel)]="balance">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="saveAccount()">Save</button>
+

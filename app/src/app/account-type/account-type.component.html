@@ -1,0 +1,9 @@
+<div>
+  <div class="mb-3 col-md-4 row">
+  <label class="col-sm-4 col-form-label">Select Type</label>
+  <select class="form-select col-sm-10" [(ngModel)]="accountType" (ngModelChange)="accountTypeChanged()">
+    <option [value]=""></option>
+    <option *ngFor="let item of accountTypes" [value]="item">{{item}}</option>
+  </select>
+  </div>
+</div>
