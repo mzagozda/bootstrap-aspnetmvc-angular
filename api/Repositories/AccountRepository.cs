@@ -9,11 +9,6 @@ namespace Repositories
 
         public AccountRepository()
         {
-            CreateDefault();
-        }
-
-        private void CreateDefault()
-        {
             _accounts = new List<AccountModel>
             {
                 new AccountModel {FirstName = "Ruby", LastName = "Curtis", Balance = 300},

@@ -15,16 +15,6 @@ namespace API.Controllers
         private readonly IAddressService _addressService;
 
         /// <summary>
-           /* TODO
-        - Create a REST API to get all the accounts
-            For every account you need to use AddressService to load an address(City and PostCode)
-            You can use AccountResponse class
-
-        - Create a REST API to save an account
-            Call BalanceChecker to verify if you can save
-            You can use AccountRequest class as a payload
-     */
-
         /// </summary>
         /// <param name="accountService">Instance of <see cref="AccountService/></param>
         /// <param name="addressService">Instance of <see cref="AddressService/></param>
@@ -55,7 +45,6 @@ namespace API.Controllers
         /// <returns>Newly created object <see cref="AccountResponse"/></returns>
 
         [HttpPost]
-        //[IgnoreInvalidModelState]
         public async Task<ActionResult> CreateAccount([FromBody] AccountRequest request)
         {
             if (request == null) return new BadRequestResult();

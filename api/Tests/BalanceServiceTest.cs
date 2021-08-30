@@ -23,7 +23,7 @@ namespace Tests
         [TestMethod]
         public void BalanceServiceProcessSuccess()
         {
-            AccountModel search = new AccountModel { FirstName = "Gibson", LastName = "Kirk", Balance = 7100 };
+            AccountModel search = new() { FirstName = "Gibson", LastName = "Kirk", Balance = 7100 };
             bool result = _balanceService.Process(search.Balance, search.LastName, false).Result;
 
             Assert.IsTrue(result);
@@ -32,7 +32,7 @@ namespace Tests
         [TestMethod]
         public void BalanceServiceProcessFailure()
         {
-            AccountModel search = new AccountModel { FirstName = "Gibson", LastName = "Kirk", Balance = 10001 };
+            AccountModel search = new() { FirstName = "Gibson", LastName = "Kirk", Balance = 10001 };
             bool result = _balanceService.Process(search.Balance, search.LastName, false).Result;
 
             Assert.IsFalse(result);

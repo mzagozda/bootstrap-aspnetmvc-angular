@@ -18,7 +18,7 @@ namespace Tests
         [TestMethod]
         public void GetAddress()
         {
-            AccountModel search = new AccountModel { FirstName = "Kirk", LastName = "Gibson", Balance = 7100 };
+            AccountModel search = new() { FirstName = "Kirk", LastName = "Gibson", Balance = 7100 };
             string result = _addressService.GetAddress(search).Result;
 
             Assert.AreNotEqual(string.Empty, result);

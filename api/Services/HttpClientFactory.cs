@@ -13,7 +13,10 @@ namespace Services
     public static class HttpClientFactory
     {
         private static HttpClient _httpClient;
-        public static HttpClient GetHttpClient()
+
+        public static HttpClient Client => GetHttpClient();
+
+        private static HttpClient GetHttpClient()
         {
             if (_httpClient == null)
                 _httpClient = new HttpClient();

@@ -15,7 +15,7 @@ namespace Services
 
         public async Task<string> GetAddress(AccountModel model)
         {
-            var response = await HttpClientFactory.GetHttpClient().GetAsync("https://randomuser.me/api/?nat=gb");
+            var response = await HttpClientFactory.Client.GetAsync("https://randomuser.me/api/?nat=gb");
             var content = response.Content;
             var address = content.ReadAsStringAsync().Result;
 
